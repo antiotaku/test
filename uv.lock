@@ -4,8 +4,8 @@ requires-python = ">=3.11"
 
 [[package]]
 name = "astron-result"
-version = "1.0.0"
-source = { git = "https://github.com/ASTRON-AI/astron-result.git#42b31c8568243518dba6aade8800c2a31dd4ade6" }
+version = "2.0.0"
+source = { git = "https://github.com/ASTRON-AI/astron-result.git?tag=v2.0.0#abc5d588bd543a6bb94bb4af80ca3e6263bab28c" }
 
 [[package]]
 name = "colorama"
@@ -82,7 +82,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "astron-result", git = "https://github.com/ASTRON-AI/astron-result.git" }]
+requires-dist = [{ name = "astron-result", git = "https://github.com/ASTRON-AI/astron-result.git?tag=v2.0.0" }]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8.4.2" }]
+dev = [{ name = "pytest", specifier = ">=8.4.2,<9.0" }]
