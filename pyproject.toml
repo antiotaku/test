@@ -4,13 +4,16 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
-    "astron-result",
+    # Pinned to the 2.x line for stability (lock pins exact commit)
+    "astron-result>=2.0,<3.0",
 ]
 
 [tool.uv.sources]
-astron-result = { git = "https://github.com/ASTRON-AI/astron-result.git" }
+# Pin to released tag for deterministic source resolution; update tag when upgrading major/minor.
+astron-result = { git = "https://github.com/ASTRON-AI/astron-result.git", tag = "v2.0.0" }
 
 [dependency-groups]
 dev = [
-    "pytest>=8.4.2",
+    # Constrain to pytest 8.x to avoid unexpected major upgrade breaks
+    "pytest>=8.4.2,<9.0",
 ]
